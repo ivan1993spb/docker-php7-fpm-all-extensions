@@ -1,7 +1,7 @@
 
 # Docker PHP7 fpm all extensions
 
-## Installed extensions:
+## Installed extensions
 
 - bz2
 - curl
