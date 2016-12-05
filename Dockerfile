@@ -4,45 +4,45 @@ FROM php:7.1-rc-fpm
 MAINTAINER Ivan Pushkin <iv.pushk@gmail.com>
 
 RUN apt-get update && apt-get install -y \
-        libbz2-dev \
-        libc-client2007e-dev \
-        libcurl4-gnutls-dev \
-        libedit-dev \
-        libfreetype6-dev \
-        libicu-dev \
-        libjpeg62-turbo-dev \
-        libkrb5-dev \
-        libmcrypt-dev \
-        libpng12-dev \
-        libpq-dev \
-        libsqlite3-dev \
-        libxml2-dev \
-        libxslt1-dev
+    libbz2-dev \
+    libc-client2007e-dev \
+    libcurl4-gnutls-dev \
+    libedit-dev \
+    libfreetype6-dev \
+    libicu-dev \
+    libjpeg62-turbo-dev \
+    libkrb5-dev \
+    libmcrypt-dev \
+    libpng12-dev \
+    libpq-dev \
+    libsqlite3-dev \
+    libxml2-dev \
+    libxslt1-dev
 
 RUN mkdir -p /usr/kerberos
 RUN ln -s /usr/lib/x86_64-linux-gnu /usr/kerberos/lib
 
 RUN docker-php-ext-install -j$(nproc) \
-        bz2 \
-        curl \
-        iconv \
-        intl \
-        json \
-        mbstring \
-        mcrypt \
-        mysqli \
-        opcache \
-        pdo \
-        pdo_mysql \
-        pdo_pgsql \
-        pdo_sqlite \
-        pgsql \
-        readline \
-        soap \
-        xml \
-        xmlrpc \
-        xsl \
-        zip
+    bz2 \
+    curl \
+    iconv \
+    intl \
+    json \
+    mbstring \
+    mcrypt \
+    mysqli \
+    opcache \
+    pdo \
+    pdo_mysql \
+    pdo_pgsql \
+    pdo_sqlite \
+    pgsql \
+    readline \
+    soap \
+    xml \
+    xmlrpc \
+    xsl \
+    zip
 
 RUN docker-php-ext-configure imap --with-kerberos=/usr/kerberos --with-imap-ssl \
     && docker-php-ext-install -j$(nproc) imap
