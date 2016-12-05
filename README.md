@@ -1,6 +1,12 @@
 
 # Docker PHP7 fpm all extensions [![Docker Repository on Quay](https://quay.io/repository/ivan1993spb/php7-fpm-all-extensions/status "Docker Repository on Quay")](https://quay.io/repository/ivan1993spb/php7-fpm-all-extensions)
 
+## Pull docker image
+
+```
+docker pull quay.io/ivan1993spb/php7-fpm-all-extensions
+```
+
 ## Installed extensions
 
 - bz2
