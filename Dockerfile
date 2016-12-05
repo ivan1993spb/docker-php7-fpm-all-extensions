@@ -3,7 +3,7 @@ FROM php:7.1-rc-fpm
 
 MAINTAINER Ivan Pushkin <iv.pushk@gmail.com>
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
     libbz2-dev \
     libc-client2007e-dev \
     libcurl4-gnutls-dev \
