@@ -4,7 +4,7 @@
 ## Pull docker image
 
 ```
-docker pull quay.io/ivan1993spb/php7-fpm-all-extensions
+docker pull ivan1993spb/php7-fpm-all-extensions
 ```
 
 ## Installed extensions
