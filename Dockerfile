@@ -17,7 +17,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -yq \
     libpq-dev \
     libsqlite3-dev \
     libxml2-dev \
-    libxslt1-dev
+    libxslt1-dev \
+    php-pear
 
 RUN mkdir -p /usr/kerberos
 RUN ln -s /usr/lib/x86_64-linux-gnu /usr/kerberos/lib
