@@ -11,6 +11,7 @@ docker pull ivan1993spb/php7-fpm-all-extensions
 
 - bz2
 - curl
+- exif
 - iconv
 - imap
 - intl
