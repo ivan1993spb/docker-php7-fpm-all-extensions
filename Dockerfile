@@ -26,6 +26,7 @@ RUN ln -s /usr/lib/x86_64-linux-gnu /usr/kerberos/lib
 RUN docker-php-ext-install -j$(nproc) \
     bz2 \
     curl \
+    exif \
     iconv \
     intl \
     json \
